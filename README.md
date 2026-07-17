@@ -16,6 +16,24 @@ Proyek ini adalah pengontrol LED internal (built-in LED) pada ESP32 menggunakan 
 
 ---
 
+## 📈 Karakteristik Sinyal Mode Visual
+
+Berikut adalah visualisasi kurva sinyal PWM (tingkat kecerahan LED) untuk masing-masing mode utama:
+
+### 1. Mode BREATH (Breathing)
+Menggunakan kurva sinusoidal eksponensial untuk transisi redup-terang yang alami di mata manusia.
+![Breathing Curve](images/breath_curve.svg)
+
+### 2. Mode BLINK (Blinking)
+Sinyal kotak (square wave) dengan transisi instan dari batas kecerahan minimum ke maksimum.
+![Blinking Curve](images/blink_curve.svg)
+
+### 3. Mode SOLID (Constant)
+Sinyal datar pada tingkat kecerahan tertentu (dibatasi oleh `min` dan `max` secara dinamis).
+![Solid Curve](images/solid_curve.svg)
+
+---
+
 ## 🖥️ Command Serial CLI
 Buka Serial Monitor dengan baud rate **115200**, lalu kirimkan perintah berikut:
 

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 180" width="100%" height="180">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="8" />
+  
+  <line x1="50" y1="30" x2="450" y2="30" stroke="#30363d" stroke-dasharray="4" />
+  <line x1="50" y1="130" x2="450" y2="130" stroke="#30363d" stroke-dasharray="4" />
+  <line x1="50" y1="140" x2="450" y2="140" stroke="#8b949e" stroke-width="2" />
+  <line x1="50" y1="20" x2="50" y2="145" stroke="#8b949e" stroke-width="2" />
+  
+  <text x="45" y="34" fill="#8b949e" font-family="sans-serif" font-size="12" text-anchor="end">Max (255)</text>
+  <text x="45" y="134" fill="#8b949e" font-family="sans-serif" font-size="12" text-anchor="end">Min (0)</text>
+  <text x="50" y="160" fill="#8b949e" font-family="sans-serif" font-size="12" text-anchor="middle">0%</text>
+  <text x="250" y="160" fill="#8b949e" font-family="sans-serif" font-size="12" text-anchor="middle">50%</text>
+  <text x="450" y="160" fill="#8b949e" font-family="sans-serif" font-size="12" text-anchor="middle">100%</text>
+  
+  <path d="M 50,130 C 110,130 120,30 150,30 C 180,30 190,130 250,130 C 310,130 320,30 350,30 C 380,30 390,130 450,130" 
+        fill="none" stroke="#00f3ff" stroke-width="4" stroke-linecap="round" filter="url(#glow)" />
+</svg>
